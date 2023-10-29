@@ -1,0 +1,192 @@
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style-type: none;
+}
+.DropDown-wrapper {
+  margin: 200px auto;
+  width: 320px;
+  height: 424px;
+}
+
+.DropDown-but {
+  width: 320px;
+  height: 48px;
+  padding: 0 8px 0 16px;
+  border: 1px solid darkgray;
+  border-radius: 12px;
+  text-align: left;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url("../assets/icons/SearchsearchIcon.svg");
+  margin-right: 8px;
+}
+
+.choosenItemCount {
+  margin-left: 70px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: blue;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+}
+
+.DropDown {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  width: 320px;
+  height: 344px;
+  border-radius: 12px;
+  border: 1px solid darkgray;
+}
+
+.DropDown-list {
+  padding: 15px 15px;
+  display: flex;
+  gap: 5px;
+  border-bottom: 1px solid darkgray;
+}
+.active-list-item {
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  margin-bottom: -16px;
+}
+
+/* Скрыть стандартный скроллбар в Chrome */
+.DropDown-options-area {
+  max-height: 84%;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: black transparent; /* Цвет ползунка и фона полосы прокрутки */
+}
+
+/* Скрыть стандартный скроллбар в Firefox */
+.DropDown-options-area {
+  scrollbar-width: thin;
+  scrollbar-color: black transparent; /* Цвет ползунка и фона полосы прокрутки */
+}
+
+/* Создать кастомный скроллбар для Chrome */
+.DropDown-options-area::-webkit-scrollbar {
+  width: 4px;
+}
+
+.DropDown-options-area::-webkit-scrollbar-thumb {
+  background: black; /* Черный цвет ползунка */
+  border-radius: 6px;
+}
+
+.DropDown-options-area::-webkit-scrollbar-track {
+  background: transparent; /* Прозрачный фон полосы прокрутки */
+}
+
+/* Создать кастомный скроллбар для Firefox */
+.DropDown-options-area {
+  scrollbar-width: thin;
+  scrollbar-color: black transparent; /* Цвет ползунка и фона полосы прокрутки */
+}
+.DropDown-selected-area {
+  border-bottom: 1px solid darkgray;
+  height: 120px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  max-height: 48px; /* Высота контейнера */
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+.DropDown-selected-but {
+  border: 1px solid darkgray;
+  text-align: center;
+  border-radius: 8px;
+  padding: 6px 10px 6px 15px;
+  margin: 10px 5px 10px 5px;
+}
+
+.DropDown-options-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
+  align-items: center;
+}
+
+.DropDown-options-item p {
+  font-weight: 500;
+}
+
+.DropDown-options-radioBut {
+  appearance: none; /* Скроет стандартные стили радиокнопки */
+  width: 32px;
+  height: 32px;
+  border: 1px solid darkgray; /* Цвет рамки радиокнопки */
+  border-radius: 50%; /* Для создания круглой формы */
+  cursor: pointer; /* Изменит указатель при наведении на радиокнопку */
+}
+
+.DropDown-options-radioBut:checked::before {
+  content: "\2713";
+  display: block;
+  height: 32px;
+  text-align: center;
+  line-height: 31px;
+  font-size: 14px;
+  color: white;
+  background-color: blue;
+  border-radius: 50%;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+/* Опциональные стили для текста между радиокнопками */
+.DropDown-options-item p {
+  font-weight: bold;
+}
+
+.cross {
+  margin-left: 10px;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  position: relative;
+}
+
+.cross::before,
+.cross::after {
+  content: "";
+  position: absolute;
+  background-color: darkgray; /* Темно-серый цвет */
+}
+
+.cross::before {
+  border-radius: 30px;
+  width: 100%;
+  height: 2px;
+  top: 5px;
+  left: 0;
+  rotate: 45deg;
+}
+
+.cross::after {
+  border-radius: 30px;
+  width: 2px;
+  height: 100%;
+  top: 1px;
+  left: 4px;
+  rotate: 45deg;
+}
